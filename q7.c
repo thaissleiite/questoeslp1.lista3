@@ -34,3 +34,49 @@ printf("O maior eh %d e %d\n", maior1, maior2 );
 
 
   }
+
+
+//codigo rodando
+#include <stdio.h>
+  int main (){
+    int n1, n2, n3, cont, maior1, maior2;
+
+      printf("Insira o numero:\n");
+        scanf("%d", &n1);
+        printf("Insira o numero:\n");
+          scanf("%d", &n2);
+
+          if (n1 > n2){
+            maior1 = n1;
+          }
+          else{
+            maior1 = n2;
+          }
+
+
+        for(cont = 0; cont <= 8; cont++){
+                //loop
+
+          printf("Insira o numero:\n");
+          scanf("%d", &n3);
+
+          if(n3 > maior1){
+           n2 =  maior1;
+            maior1 = n3;
+   }
+
+            else{
+               if(n3 > n2){
+                n2 = n3;
+               }
+            }
+
+}
+
+printf("O maior eh %d e %d\n", maior1, n2);
+            return 0;
+
+
+
+
+  }
