@@ -1,11 +1,9 @@
-#include <stdio.h>
-
 int main() {
-    double horastrabalhadas, taxahoranormal;
+    float horastrabalhadas, horanormal, pagamentobruto, horasextras;
 
     while(1){
     printf("Insira o numero de horas trabalhadas(-1 para finalizar): ");
-    scanf("%lf", &horastrabalhadas);
+    scanf("%f", &horastrabalhadas);
 
        if(horastrabalhadas == -1){
 
@@ -14,20 +12,21 @@ int main() {
        }
 
        printf("Insira o valor do horario normal: ");
-       scanf("%lf", &taxahoranormal);
+       scanf("%f", &horanormal);
 
-       double pagbruto;
+
 
        if(horastrabalhadas <= 40){
-       pagbruto = horastrabalhadas * taxahoranormal;
+       pagamentobruto = horastrabalhadas * horanormal;
+
        }else {
 
-       double horasextras = horastrabalhadas - 40;
-       pagbruto = (40 * taxahoranormal) + (horasextras * 1.5 * taxahoranormal);
+      horasextras = horastrabalhadas - 40;
+       pagamentobruto = (40 * horanormal) + (horasextras * 1.5 * horanormal);
        }
 
 
-    printf("O valor do salario eh: %.2f\n\n", pagbruto);
+    printf("O valor do salario eh: %.2f\n\n", pagamentobruto);
     }
     return 0;
 }
